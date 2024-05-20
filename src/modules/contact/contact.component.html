@@ -1,0 +1,23 @@
+<div class="p-card surface-card shadow-8 p-4 mt-5 border-round w-full lg:w-6 mx-auto lg:mx-0">
+    <h1 class="text-center mb-4 text-purple-700">Form</h1>
+    <form [formGroup]="form2" (ngSubmit)="validarForm()" class="lg:text-left">
+        <div class="mb-4">
+            <label class="block mb-2 text-purple-700 font-semibold" for="name">Name:</label>
+            <input type="text" formControlName="name" class="p-inputtext mb-2 w-full border-purple-500 focus:border-purple-700 focus:ring focus:ring-purple-200" placeholder="Your name here">
+        </div>
+        <small *ngIf="nameInvalid" class="block mb-3 text-red-700">Name Incorrect</small>
+        <div class="mb-4">
+            <label class="block mb-2 text-purple-700 font-semibold" for="email">Email:</label>
+            <input type="email" formControlName="email" class="p-inputtext mb-2 w-full border-purple-500 focus:border-purple-700 focus:ring focus:ring-purple-200" placeholder="Your mail here">
+        </div>
+        <small *ngIf="emailInvalid" class="block mb-3 text-red-700">Email Incorrect</small>
+        <div class="mb-4">
+            <label class="block mb-2 text-purple-700 font-semibold" for="message">Message:</label>
+            <textarea rows="5" cols="30" formControlName="message" class="p-inputtextarea mb-2 w-full border-purple-500 focus:border-purple-700 focus:ring focus:ring-purple-200" placeholder="Your message here"></textarea>
+            <small *ngIf="messageInvalid" class="block mb-3 text-red-700">Message Incorrect</small>
+        </div>
+        
+        <button type="submit" class="p-button w-full bg-purple-700 text-white font-semibold hover:bg-purple-800 focus:outline-none focus:ring focus:ring-purple-200" label="Enviar" pButton></button>
+    </form>
+</div>
+<p-toast></p-toast>

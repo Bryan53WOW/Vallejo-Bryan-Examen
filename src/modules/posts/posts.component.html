@@ -1,0 +1,15 @@
+<div class="surface-card shadow-8 p-4 mt-5 border-round w-full lg:w-6" style="margin: 0 auto;">
+    <h1 class="text-center">DOTA 2</h1>
+    <div class="posts">
+      <div *ngFor="let post of posts" class="p-card shadow-2 mb-3">
+        <div class="p-card-header">
+          <h2>{{ post.title }}</h2>
+        </div>
+        <div class="p-card-body">
+          <p>{{ post.body }}</p>
+          <!-- Imagen relacionada con Dota 2 -->
+          <img src="https://i.pinimg.com/originals/bb/f9/63/bbf963473b3d137fc4977882827c95d3.jpg" alt="Dota 2 Hero" class="w-full mt-4">
+        </div>
+      </div>
+    </div>
+  </div>

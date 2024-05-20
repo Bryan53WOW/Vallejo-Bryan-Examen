@@ -1,0 +1,9 @@
+<div class="bg-blue-500 py-3 px-6 shadow-2 flex items-center lg:static border-b-1 border-gray-800 justify-between">
+  <h1 class="text-white mr-auto lg:mr-0">Examen de Bryan</h1>
+  <p-menubar [model]="menuItems" class="mt-2"></p-menubar>
+  <div *ngFor="let item of items" class="text-white flex-column">
+      {{item.name}}
+  </div>
+</div>
+
+<router-outlet></router-outlet>
